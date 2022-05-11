@@ -6,6 +6,7 @@ import com.ciklum.microservice.camel.processor.PersonProcessor;
 import com.ciklum.microservice.camel.transformer.PersonTransformer;
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.component.jackson.ListJacksonDataFormat;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -24,7 +25,7 @@ public class PersonRouter extends RouteBuilder {
         from("timer:rest-client?repeatCount=1")
                 .setHeader(Exchange.HTTP_METHOD, constant("GET"))
                 .to("https://gorest.co.in/public/v2/users")
-                .unmarshal().json(JsonLibrary.Jackson, Person[].class)
+                .unmarshal(new ListJacksonDataFormat(Person.class))
                 .bean(personProcessor)
                 .bean(personTransformer)
                 .process(new PersonExchangeProcessor())

@@ -7,5 +7,25 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.6.7" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.6.7" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.36" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.19" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-core-model:3.16.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-api:3.16.0" level="project" />
+    <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy:1.11.22" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-core:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-jackson:3.16.0" level="project" />
   </component>
 </module>
