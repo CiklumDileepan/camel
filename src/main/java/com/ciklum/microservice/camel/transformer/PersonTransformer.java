@@ -13,9 +13,8 @@ public class PersonTransformer {
 
     private Logger logger = LoggerFactory.getLogger(PersonTransformer.class);
 
-    public List<Person> fetchActivePersons(Person[] persons) {
-        logger.info("PersonTransformer: Total persons {} and processing only active persons", persons.length);
-        List<Person> personsList = Arrays.asList(persons);
+    public List<Person> fetchActivePersons(List<Person> personsList) {
+        logger.info("PersonTransformer: Total persons {} and processing only active persons", personsList.size());
         return personsList.stream()
                 .filter(person -> person.getStatus().equalsIgnoreCase("active"))
                 .toList();
